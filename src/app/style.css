@@ -1,0 +1,219 @@
+.poppins-thin {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  .font-poppins{
+    font-family: "Poppins", serif;
+  }
+  .poppins-extralight {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+h1,h2,h3,h4,h5,h6{
+    font-family: "Poppins", serif;
+}
+
+
+/* Initial styles for animated elements */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly below the view */
+  transition: all 0.6s ease-out;
+}
+
+/* Animated state */
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0); /* Move to its original position */
+}
+
+/* Variants of animations */
+.fade-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.animated {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-in-left {
+  transform: translateX(-100px);
+}
+
+.slide-in-left.animated {
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  transform: translateX(100px);
+}
+
+.slide-in-right.animated {
+  transform: translateX(0);
+}
+
+.zoom-in {
+  transform: scale(0.5);
+}
+
+.zoom-in.animated {
+  transform: scale(1);
+}
+
+.slide-in-down {
+  transform: translateY(-100px);
+}
+.slide-in-down.animated {
+  transform: translateX(0);
+}
+
+.slide-in-up {
+  transform: translateY(100px);
+}
+.slide-in-up.animated {
+  transform: translateX(0);
+}
+.circle-text span {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform-origin: 50% calc(50% - 87px);/* Adjust the radius here (150px matches circle size) */
+}
+
+#circle {
+  position: relative;
+  border-radius: 100%;
+  padding: 16px;
+ 	animation: rotate-animation 8s infinite linear;
+}
+
+#circle span {
+  position: absolute;
+  transform-origin: top left;
+}
+
+@keyframes rotate-animation {
+  from { transform: rotate(0); }
+  to { transform: rotate(-360deg); }
+}
+
+.animate-underline{
+  position: relative;
+}
+.animate-underline::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #6c63ff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.animate-underline:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
